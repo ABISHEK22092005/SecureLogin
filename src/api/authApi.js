@@ -1,6 +1,9 @@
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+
 export const loginUser = async (email, password)=>{
     const response = await fetch(
-        "http://localhost:8080/api/auth/login",
+        // "http://localhost:8080/api/auth/login",
+        `${API_BASE_URL}/api/auth/login`,
         {
             method:"POST",
 
@@ -22,7 +25,8 @@ export const loginUser = async (email, password)=>{
 
 export const registerUser = async(name,email,password)=>{
 const response = await fetch(
-    "http://localhost:8080/api/auth/register",
+    // "http://localhost:8080/api/auth/register",
+    `${API_BASE_URL}/api/auth/register`,
     {
         method:"POST",
         headers:{
@@ -50,8 +54,8 @@ export const getProfile = async()=>{
     const token = localStorage.getItem("token");
 
     const respone = await fetch(
-
-        "http://localhost:8080/api/profile",
+        `${API_BASE_URL}/api/profile`,
+        // "http://localhost:8080/api/profile",
         {
             method:"GET",
             headers:{

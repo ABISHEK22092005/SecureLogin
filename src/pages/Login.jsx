@@ -108,9 +108,11 @@ const Login = () => {
 </form>
       <p className='text-centre text-white/70 mt-6'>
       Don't have an account ?{' '}
-        <a href="#" className='text-white font-semibold hover:underline'>
+        {/* <a href="" className='text-white font-semibold hover:underline'>
           Register
-        </a>
+        </a> */}
+        <link to="/register" className="text-white font-semibold hover:underline"
+        >Register</link>
       </p>
      
       </div>
