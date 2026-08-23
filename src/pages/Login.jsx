@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { useMutation } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../api/authApi';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -111,8 +112,8 @@ const Login = () => {
         {/* <a href="" className='text-white font-semibold hover:underline'>
           Register
         </a> */}
-        <link to="/register" className="text-white font-semibold hover:underline"
-        >Register</link>
+        <Link to="/register" className="text-white font-semibold hover:underline"
+        >Register</Link>
       </p>
      
       </div>

@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import { registerUser } from '../api/authApi';
+import { Link } from 'react-router-dom';
 const Register = () => {
 
   const[name, setName] = useState("");
