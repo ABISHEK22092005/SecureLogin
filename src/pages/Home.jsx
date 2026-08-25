@@ -70,7 +70,7 @@ const Home = () => {
 
       <button onClick={() => {
         localStorage.removeItem("token");
-        window.location.href = "/login";
+        window.location.href = "/";
       
       }} className='mt-6 px-4 py-2 bg-red-500 text-white rounded'>
         logout
