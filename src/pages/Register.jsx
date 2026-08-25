@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import { registerUser } from '../api/authApi';
 import { Link,Navigate,useNavigate } from 'react-router-dom';
 const Register = () => {
-
+  const navigate = useNavigate();
   const[name, setName] = useState("");
   const[email, setEmail] = useState("");
   const[password, setPassword]=useState("");
