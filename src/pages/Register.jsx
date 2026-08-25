@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { registerUser } from '../api/authApi';
-import { Link } from 'react-router-dom';
+import { Link,Navigate,useNavigate } from 'react-router-dom';
 const Register = () => {
 
   const[name, setName] = useState("");
@@ -51,7 +51,9 @@ try{
   console.log("REGISTER RESPONSE:", data);
 
   setMessage(data);
-
+  setTimeout(()=>{
+    navigiate("/");
+  },1500);
 }
   catch(error){
     console.error("REGISTER ERROR:", error);
