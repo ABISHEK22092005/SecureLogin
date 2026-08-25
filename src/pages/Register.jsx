@@ -52,7 +52,7 @@ try{
 
   setMessage(data);
   setTimeout(()=>{
-    navigiate("/");
+    Navigate("/");
   },1500);
 }
   catch(error){
