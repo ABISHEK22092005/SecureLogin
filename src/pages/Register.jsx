@@ -41,29 +41,7 @@ if(password.length<8){
 }
 
 try{
-  // const response = await fetch(
-  //   "http://localhost:8080/api/auth/register",
-  //   {
-  //     method:"POST",
-  //     headers:{
-  //       "Content-Type":"application/json"
-  //             },
-  //     body: JSON.stringify({
-  //       name:name,
-  //       email: email,
-  //       password:password
-  //                   })
-  //   }
-  // );
-  
-  // const data = await response.text();
-  // console.log("REGISTER RESPONSE:", data);
-
-  // if(!response.ok){
-  //   setError(data);
-  //   return;
-  // }
-  // setMessage(data);
+ 
    const data = await registerUser(
     name,
     email,

@@ -2,7 +2,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080
 
 export const loginUser = async (email, password)=>{
     const response = await fetch(
-        // "http://localhost:8080/api/auth/login",
+      
         `${API_BASE_URL}/api/auth/login`,
         {
             method:"POST",
@@ -25,7 +25,7 @@ export const loginUser = async (email, password)=>{
 
 export const registerUser = async(name,email,password)=>{
 const response = await fetch(
-    // "http://localhost:8080/api/auth/register",
+   
     `${API_BASE_URL}/api/auth/register`,
     {
         method:"POST",
@@ -55,7 +55,7 @@ export const getProfile = async()=>{
 
     const respone = await fetch(
         `${API_BASE_URL}/api/profile`,
-        // "http://localhost:8080/api/profile",
+
         {
             method:"GET",
             headers:{
@@ -64,7 +64,6 @@ export const getProfile = async()=>{
         }
     );
 
-    // const data = await respone.text();
 
     if(!respone.ok){
         if(respone.status===401 || respone.status===403){

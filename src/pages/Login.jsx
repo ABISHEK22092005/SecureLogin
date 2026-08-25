@@ -13,27 +13,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     const loginMutation = useMutation({
-      // mutationFn: async()=>{
-      //   const respone = await fetch(
-      //     "http://localhost:8080/api/auth/login",
-      //     {
-      //       method:"POST",
-      //       headers:{
-      //         "Content-Type": "application/json"
-      //       },
-      //       body: JSON.stringify({
-      //         email: email,
-      //         password: password
-      //       })
-      //     }
-      //   );
-      //   const data = await respone.text();
-
-      //   if(!respone.ok){
-      //     throw new Error(data);
-      //   }
-      //   return data;
-      // },
+     
 
       mutationFn:()=> loginUser(email,password),
       

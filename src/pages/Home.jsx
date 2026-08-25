@@ -3,38 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { getProfile } from '../api/authApi';
 const Home = () => {
-  // const [message, setMessage] = useState("");
-
-  // useEffect(()=>{
-  //   const token = localStorage.getItem("token");
-
-  //   fetch("http://localhost:8080/test")
-  //   .then((response)=> response.text())
-  //   .then((data)=>{
-  //     setMessage(data);
-  //   });
-  // },[]);
-
-  // useEffect(()=>{
-  //   const token = localStorage.getItem("token");
-
-  //   console.log("TOKEN:", token)
-
-  //   fetch("http://localhost:8080/api/profile",{
-  //     method:"GET",
-  //     headers:{
-  //       Authorization:`Bearer ${token}`
-  //     }
-  //   })
-  //   .then((response)=> response.text())
-  //   .then((data)=>{
-  //     console.log("PROFILE RESPONSE : ",data)
-  //     setMessage(data)})
-  //   .catch((error)=>{
-  //     console.error("PROFILE ERROR: ",error)
-  //     setMessage("Not Authorized")
-  // })
-  // },[]);
+  
   const navigate = useNavigate();
   const { data, isPending, isError, isFetching } = useQuery({
     queryKey: ["profile"],
